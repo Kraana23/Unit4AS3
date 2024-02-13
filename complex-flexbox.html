@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Complex flexbox example</title>
+    <style>
+        html {
+            font-family: 'Courier New';
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            background: rgb(232, 120, 139);
+            height: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(0, 25, 6);
+            line-height: 100px;
+            margin: 0;
+        }
+
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: lightcoral;
+        }
+
+        /* Add your flexbox CSS below here */
+        section {
+            display: flex;
+        }
+
+        article {
+            flex: 1 200px;
+        }
+
+        article:nth-of-type(3) {
+            flex: 3 200px;
+            display: flex;
+            flex-flow: column;
+        }
+
+        article:nth-of-type(3) div:first-child {
+            flex: 1 100px;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        button {
+            flex: 1 auto;
+            margin: 5px;
+            font-size: 18px;
+            line-height: 1.5;
+            background-color: rgb(167, 255, 226);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Complex flexbox example</h1>
+    </header>
+
+    <section>
+        <article>
+            <h2><strong>First article</strong></h2>
+            <img src="https://cdn.vox-cdn.com/thumbor/lF_FaRpXEIHDPG9x7xADx1GEL6w=/97x0:682x439/1400x1400/filters:focal(97x0:682x439):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/46551012/3847f580-51a5-0132-0b47-0eae5eefacd9.0.0.png"
+                width="365" height="300">
+            <p>This is a photo of a taco.</p>
+        </article>
+
+        <article>
+            <h2><strong>Second article</strong></h2>
+
+            <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+                carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag
+                polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo
+                booth health goth gastropub hammock.</p>
+        </article>
+
+        <article>
+            <div>
+                <button><strong>Smile</strong></button>
+                <button>Laugh</button>
+                <button>scream</button>
+                <button>cry</button>
+                <button><i>Blush</i></button>
+            </div>
+            <div>
+                <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday
+                    carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore
+                    hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia
+                    iPhone photo booth health goth gastropub hammock.</p>
+            </div>
+            <div>
+                <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo
+                    8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings
+                    cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art
+                    party.</p>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
